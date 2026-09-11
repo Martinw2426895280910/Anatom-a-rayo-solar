@@ -1,0 +1,6 @@
+{
+  "name": "Anatomía Solar — Landing Oficial",
+  "description": "Landing page de alta conversión para 'Anatomía Solar: Un viaje al corazón ardiente de nuestra estrella' de Alberto Martin White con checkout Hotmart.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
