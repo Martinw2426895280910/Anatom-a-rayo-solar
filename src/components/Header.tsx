@@ -103,7 +103,6 @@ export const Header: React.FC<HeaderProps> = ({
           <a href="#beneficios" className="hover:text-amber-400 transition-colors">Beneficios</a>
           <a href="#capitulos" className="hover:text-amber-400 transition-colors">Capítulos</a>
           <a href="#sabias-que" className="hover:text-amber-400 transition-colors">¿Sabías qué?</a>
-          <a href="#autor" className="hover:text-amber-400 transition-colors">Redactor</a>
           <a href="#faq" className="hover:text-amber-400 transition-colors">FAQ</a>
         </nav>
 

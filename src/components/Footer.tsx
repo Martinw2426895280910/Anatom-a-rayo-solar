@@ -58,7 +58,6 @@ export const Footer: React.FC<FooterProps> = ({ config, onOpenSettings, onOpenDo
               <li><a href="#beneficios" className="hover:text-amber-400 transition-colors">Beneficios para el Lector</a></li>
               <li><a href="#capitulos" className="hover:text-amber-400 transition-colors">Estructura de Capítulos</a></li>
               <li><a href="#sabias-que" className="hover:text-amber-400 transition-colors">¿Sabías qué? (Curiosidades)</a></li>
-              <li><a href="#autor" className="hover:text-amber-400 transition-colors">Bioq. Dr. Alberto Martin White</a></li>
               <li><a href="#faq" className="hover:text-amber-400 transition-colors">Preguntas Frecuentes</a></li>
             </ul>
           </div>

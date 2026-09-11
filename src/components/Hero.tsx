@@ -172,7 +172,7 @@ export const Hero: React.FC<HeroProps> = ({ config, onCheckoutClick }) => {
             <div className="flex flex-wrap gap-y-2 gap-x-4 text-xs sm:text-sm text-neutral-300 justify-center lg:justify-start">
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                312 Páginas ilustradas en alta definición
+                Edición digital con ilustraciones en alta definición
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-amber-400" />

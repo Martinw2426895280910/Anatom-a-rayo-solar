@@ -247,7 +247,7 @@ export const BOOK_SPECS = {
   subtitle: 'Un viaje al corazón ardiente de nuestra estrella',
   author: 'Bioq. Dr. Alberto Martin White',
   entity: 'Futura Biotech',
-  pages: '312 páginas ilustradas',
+  pages: 'Edición Completa Ilustrada',
   language: 'Español (con términos astronómicos universales)',
   format: 'Ebook Digital Multidispositivo (PDF Retina + ePub Kindle Ready)',
   bonuses: [

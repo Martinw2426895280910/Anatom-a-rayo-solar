@@ -72,7 +72,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ config, onChecko
                 <div className="space-y-3 text-xs sm:text-sm text-neutral-200">
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Ebook Oficial Completo:</strong> 312 páginas con diagramas astronómicos en alta resolución.</span>
+                    <span><strong>Ebook Oficial Completo:</strong> Infolibro integral con diagramas astronómicos e infografías en alta resolución.</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />

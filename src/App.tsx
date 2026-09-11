@@ -13,7 +13,6 @@ import { SolarJourney } from './components/SolarJourney';
 import { Benefits } from './components/Benefits';
 import { BookPreview } from './components/BookPreview';
 import { DidYouKnow } from './components/DidYouKnow';
-import { AuthorSection } from './components/AuthorSection';
 import { Testimonials } from './components/Testimonials';
 import { PricingSection } from './components/PricingSection';
 import { FAQSection } from './components/FAQSection';
@@ -141,9 +140,6 @@ export default function App() {
 
         {/* "¿Sabías que...?" Engaging Trivia & Cosmic Facts */}
         <DidYouKnow />
-
-        {/* Author Presentation: Alberto Martin White (Futura Biotech) */}
-        <AuthorSection />
 
         {/* Reader Reviews & Testimonials */}
         <Testimonials />

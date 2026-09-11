@@ -46,8 +46,8 @@ export const Benefits: React.FC<BenefitsProps> = ({ config, onCheckoutClick }) =
     },
     {
       icon: Eye,
-      title: 'Una experiencia visual inmersiva en cada página',
-      readerBenefit: 'No es solo texto: más de 300 páginas acompañadas de gráficos de alta definición, cortes esquemáticos, mapas magnéticos y comparativas a escala que despiertan el asombro en cada capítulo.',
+      title: 'Una experiencia visual inmersiva en cada capítulo',
+      readerBenefit: 'No es solo texto: un infolibro acompañado de gráficos de alta definición, cortes esquemáticos, mapas magnéticos y comparativas a escala que despiertan el asombro en cada explicación.',
       badge: 'Visual HD'
     },
     {

@@ -119,7 +119,7 @@ export const BookPreview: React.FC<BookPreviewProps> = ({ config, onCheckoutClic
             <div className="pt-2 flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
               <div className="flex items-center gap-2.5 text-xs text-neutral-300">
                 <FileText className="w-4 h-4 text-amber-400" />
-                <span>¿Quieres leer las primeras páginas antes de comprar?</span>
+                <span>¿Quieres explorar el contenido antes de comprar?</span>
               </div>
               <button
                 onClick={() => setShowSampleModal(true)}
