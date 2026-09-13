@@ -1,7 +1,7 @@
 import { Chapter, Testimonial, SolarFact, FAQItem, CampaignConfig } from '../types';
 
 export const DEFAULT_CONFIG: CampaignConfig = {
-  hotmartCheckoutUrl: 'https://pay.hotmart.com/V102119673D',
+  hotmartCheckoutUrl: 'https://pay.hotmart.com/V102119673D?checkoutMode=2',
   priceCurrency: 'R$',
   priceAmount: '220,00',
   originalPrice: '350,00',
@@ -15,158 +15,126 @@ export const DEFAULT_CONFIG: CampaignConfig = {
 export const SOLAR_CHAPTERS: Chapter[] = [
   {
     number: 1,
-    title: 'Génesis de una Bestia Estelar',
-    subtitle: 'El colapso gravitacional y el primer encendido nuclear',
-    description: 'Viajamos 4.600 millones de años al pasado para presenciar cómo una densa nube molecular fría dio origen al gigantesco reactor que hoy gobierna cada latido de la Tierra.',
+    title: 'Génesis Estelar',
+    subtitle: 'El nacimiento de nuestra estrella',
+    description: 'De una nube fría de gas al encendido del reactor solar.',
     highlights: [
-      'De nebulosa de polvo a protoestrella incandescente',
-      'El momento exacto en que la gravedad perdió frente a la presión termonuclear',
-      'La herencia de supernovas en el ADN de nuestro sistema'
+      'Colapso gravitacional y protoestrella',
+      'El primer encendido nuclear'
     ],
     depthKm: 'Superficie a Núcleo',
     temperature: '10 K → 15.000.000 K'
   },
   {
     number: 2,
-    title: 'La Caldera Central: El Núcleo Termonuclear',
-    subtitle: 'Donde la materia se desintegra en luz pura',
-    description: 'Penetramos en el epicentro del Sol: una masa aplastante con presiones 250.000 millones de veces superiores a las de la Tierra y un baile cuántico que desafía la física clásica.',
+    title: 'El Núcleo',
+    subtitle: 'Donde la materia se vuelve luz',
+    description: 'Fusión de hidrógeno a 15 millones de grados y presiones extremas.',
     highlights: [
-      'El túnel cuántico: cómo protones con la misma carga logran unirse',
-      '600 millones de toneladas de hidrógeno convertidas en helio por segundo',
-      'La ecuación E=mc² en su máxima expresión cosmológica'
+      'Túnel cuántico en la fusión nuclear',
+      '600M de toneladas fusionadas/segundo'
     ],
     depthKm: '0 a 175.000 km',
     temperature: '15.700.000 °C'
   },
   {
     number: 3,
-    title: 'El Laberinto Radiativo: La Odisea de un Fotón',
-    subtitle: 'Cien mil años para recorrer medio millón de kilómetros',
-    description: 'Sigue el viaje milagroso de la luz generada en el núcleo. Rebotando trillones de veces contra electrones libres en un plasma hiperdenso, un rayo de sol tarda más de 100.000 años en emerger antes de tardar solo 8 minutos en tocar tu piel.',
+    title: 'Zona Radiativa',
+    subtitle: 'La odisea de un fotón',
+    description: 'La luz tarda 100.000 años en escapar de esta densa capa.',
     highlights: [
-      'La danza del camino aleatorio (random walk) fotónico',
-      'Por qué la luz solar que te calienta hoy nació en la era de los neandertales',
-      'De rayos gamma letales a fotones de luz visible y calor'
+      'El camino aleatorio del fotón',
+      'De radiación gamma a luz visible'
     ],
     depthKm: '175.000 a 490.000 km',
     temperature: '7.000.000 °C → 2.000.000 °C'
   },
   {
     number: 4,
-    title: 'El Océano Convectivo y el Dinamo Magnético',
-    subtitle: 'Hervideros colosales del tamaño de continentes',
-    description: 'Columnas gigantescas de plasma ardiente suben y bajan como agua en ebullición. Aquí nace el campo magnético retorcido que desata la furia del astro rey.',
+    title: 'Zona Convectiva',
+    subtitle: 'El motor magnético',
+    description: 'Corrientes de plasma del tamaño de planetas que generan el campo magnético.',
     highlights: [
-      'Células de granulación: piscinas de fuego donde cabe un planeta entero',
-      'El efecto dinamo y el ciclo solar de inversión cada 11 años',
-      'Líneas magnéticas trenzadas que acumulan energía titánica'
+      'Granulación fotosférica',
+      'El ciclo solar de 11 años'
     ],
     depthKm: '490.000 a 696.000 km',
     temperature: '2.000.000 °C → 5.500 °C'
   },
   {
     number: 5,
-    title: 'La Fotosfera: La Piel Dorada y las Manchas Solares',
-    subtitle: 'La frontera visible que baña nuestro firmamento',
-    description: 'El disco que admiramos desde la Tierra. Descubre la física detrás de las manchas solares: cicatrices magnéticas oscuras donde la temperatura baja bruscamente y la tensión amenaza con estallar.',
+    title: 'Fotosfera y Manchas',
+    subtitle: 'La superficie visible',
+    description: 'El disco visible que ilumina la Tierra y sus manchas magnéticas.',
     highlights: [
-      'La paradoja de las manchas solares: por qué se ven negras si son más calientes que la lava',
-      'Cómo Galileo cambió la historia al observar su rotación diferencial',
-      'Espectrometría: la firma química del cosmos'
+      'Física de las manchas solares',
+      'Espectrometría y elementos químicos'
     ],
-    depthKm: 'Espesor de 500 km',
-    temperature: '5.500 °C (3.800 °C en manchas)'
+    depthKm: '500 km',
+    temperature: '5.500 °C'
   },
   {
     number: 6,
-    title: 'Cromosfera, Corona y el Gran Enigma Térmico',
-    subtitle: 'La paradoja de una atmósfera más caliente que su superficie',
-    description: '¿Por qué la atmósfera exterior del Sol arde a más de 1.000.000 °C cuando su superficie está a solo 5.500 °C? Desciframos el mayor enigma solar junto a ondas de Alfvén y reconexión magnética.',
+    title: 'Corona Solar',
+    subtitle: 'La atmósfera a millones de grados',
+    description: 'Por qué la atmósfera es 200 veces más caliente que la superficie.',
     highlights: [
-      'El misterio del calentamiento coronal resuelto con datos de Parker Solar Probe',
-      'Bucles coronales y espículas que eyectan plasma a velocidades supersónicas',
-      'Los eclipses totales: la única ventana humana para ver la corona a simple vista'
+      'Descubrimientos de la sonda Parker',
+      'Reconexión magnética'
     ],
-    depthKm: '2.000 a millones de km en el espacio',
+    depthKm: 'Atmósfera exterior',
     temperature: '1.000.000 °C a 3.000.000 °C'
   },
   {
     number: 7,
-    title: 'Furia Espacial: Tormentas, CME y el Evento Carrington',
-    subtitle: 'Cuando el Sol estornuda y la civilización tiembla',
-    description: 'Eyecciones de Masa Coronal capaces de apagar satélites, colapsar redes eléctricas y pintar auroras en el ecuador. Lo que ocurrió en 1859 y la vulnerabilidad de nuestra sociedad tecnológica moderna.',
+    title: 'Clima Espacial',
+    subtitle: 'Tormentas y eyecciones coronales',
+    description: 'Impacto del viento solar en satélites, auroras y redes eléctricas.',
     highlights: [
-      'El Evento Carrington de 1859 y el riesgo de una supertormenta en el siglo XXI',
-      'Cómo se protegen los astronautas y la Estación Espacial Internacional',
-      'Meteorología espacial: prediciendo el impacto del viento solar'
+      'El histórico Evento Carrington',
+      'Pronósticos y alertas solares'
     ],
-    depthKm: '150 millones de km (Órbita Terrestre)',
-    temperature: 'Viento solar a 400 - 800 km/s'
+    depthKm: '150M km a la Tierra',
+    temperature: 'Viento solar a 800 km/s'
   },
   {
     number: 8,
-    title: 'El Ocaso Solar y el Legado Biológico',
-    subtitle: 'Somos polvo de estrellas: el futuro cósmico de la vida',
-    description: 'En 5.000 millones de años, el Sol se hinchará como gigante roja antes de dejar una solitaria enana blanca. Una reflexión poética y bioquímica sobre cómo cada átomo de hierro y calcio en tus venas proviene de este ciclo estelar.',
+    title: 'Destino Solar',
+    subtitle: 'El futuro del Sol y la vida',
+    description: 'Evolución a gigante roja y la huella del Sol en cada célula viva.',
     highlights: [
-      'La muerte de una estrella de masa media: nebulosa planetaria y enana blanca',
-      'La cronología de la habitabilidad terrestre',
-      'La perspectiva bioquímica de Alberto Martin White: de la fusión estelar al ATP celular'
+      'El futuro térmico del Sistema Solar',
+      'Del reactor estelar a nuestras células'
     ],
-    depthKm: 'El Cosmos Infinito',
-    temperature: 'El destino térmico'
+    depthKm: 'Cosmos Infinito',
+    temperature: 'Destino térmico'
   }
 ];
 
 export const SOLAR_FACTS: SolarFact[] = [
   {
     id: 'fact-1',
-    title: 'La odisea de un fotón',
+    title: 'El viaje del fotón',
     statistic: '100.000 años',
-    explanation: 'La luz que entra por tu ventana tardó solo 8 minutos y 20 segundos en viajar del Sol a la Tierra. Pero le tomó más de 100.000 años salir del núcleo solar debido a trillones de colisiones.',
-    curiosity: '¡La luz que sientes hoy en tu piel comenzó a fabricarse cuando los primeros neandertales poblaban Europa!',
+    explanation: 'Un fotón tarda más de 100.000 años en salir del núcleo hacia el espacio exterior.',
+    curiosity: 'La luz que recibes hoy nació en el corazón del Sol en la era prehistórica.',
     iconName: 'Sun'
   },
   {
     id: 'fact-2',
-    title: 'Consumo colosal de combustible',
-    statistic: '600 millones Tn/seg',
-    explanation: 'Cada segundo, el Sol fusiona unas 600 millones de toneladas de hidrógeno en 596 millones de toneladas de helio. Los 4 millones restantes se transforman directamente en energía pura según E=mc².',
-    curiosity: 'Equivale a detonar 1.800 millones de bombas atómicas de hidrógeno cada segundo ininterrumpidamente.',
+    title: 'Fusión de materia',
+    statistic: '600M Tn/s',
+    explanation: 'El Sol transforma 600 millones de toneladas de hidrógeno en helio cada segundo.',
+    curiosity: 'Equivale al poder de 1.800 millones de bombas de hidrógeno estallando por segundo.',
     iconName: 'Flame'
   },
   {
     id: 'fact-3',
-    title: 'Masa cósmica aplastante',
+    title: 'Masa del Sistema',
     statistic: '99,86%',
-    explanation: 'El Sol contiene el 99,86% de toda la masa del Sistema Solar. Todos los planetas, lunas, asteroides y cometas juntos representan apenas un insignificante 0,14%.',
-    curiosity: 'Dentro del volumen del Sol cabrían aproximadamente 1.300.000 planetas Tierra apilados.',
+    explanation: 'El Sol concentra casi la totalidad de la masa; todos los planetas juntos son apenas el 0,14%.',
+    curiosity: 'Dentro del Sol cabrían 1.300.000 planetas Tierra.',
     iconName: 'Globe'
-  },
-  {
-    id: 'fact-4',
-    title: 'La gran paradoja coronal',
-    statistic: '1.000.000 °C+',
-    explanation: 'La superficie solar está a 5.500 °C, pero su atmósfera exterior (la corona) supera el millón de grados. Es como si te alejaras de una fogata y el aire se volviera 200 veces más caliente.',
-    curiosity: 'El libro desglosa las fascinantes ondas magnetohidrodinámicas que resuelven esta aparente contradicción.',
-    iconName: 'Zap'
-  },
-  {
-    id: 'fact-5',
-    title: 'El escudo que nos mantiene vivos',
-    statistic: 'La Heliosfera',
-    explanation: 'El viento solar crea una gigantesca burbuja magnética que se extiende más allá de Plutón, frenando el 90% de los rayos cósmicos letales provenientes del espacio interestelar profundo.',
-    curiosity: 'Sin esta respiración solar constante, la atmósfera terrestre y la biología compleja no habrían podido subsistir.',
-    iconName: 'Shield'
-  },
-  {
-    id: 'fact-6',
-    title: 'Cicatrices magnéticas móviles',
-    statistic: '11 Años',
-    explanation: 'Cada 11 años, el campo magnético del Sol se enreda tanto por su rotación irregular que sus polos norte y sur se invierten por completo, desencadenando auroras y tormentas solares.',
-    curiosity: 'Actualmente nos encontramos en pleno Máximo Solar del Ciclo 25, con una actividad sin precedentes.',
-    iconName: 'Activity'
   }
 ];
 
@@ -174,71 +142,71 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 't-1',
     name: 'Dra. Elena Vasconcelos',
-    role: 'Astrofísica y Divulgadora Científica',
-    location: 'São Paulo, Brasil',
+    role: 'Astrofísica',
+    location: 'Brasil',
     rating: 5,
-    highlight: 'El libro de divulgación solar más didáctico y riguroso que he leído.',
-    comment: 'Alberto Martin White logra algo excepcional: une la precisión de la bioquímica y la termodinámica con una prosa cautivadora. Visualizar el viaje del fotón desde el núcleo me conmovió profundamente. Imprescindible para docentes y apasionados del espacio.'
+    highlight: 'Didáctico, riguroso y visual.',
+    comment: 'Une la precisión científica con explicaciones sencillas. La sección del fotón es brillante.'
   },
   {
     id: 't-2',
     name: 'Carlos Mendez R.',
-    role: 'Ingeniero de Telecomunicaciones y Aficionado a la Astronomía',
-    location: 'Buenos Aires, Argentina',
+    role: 'Telecomunicaciones',
+    location: 'Argentina',
     rating: 5,
-    highlight: 'La sección de tormentas solares y el Evento Carrington vale 10 veces el precio.',
-    comment: 'Trabajo en redes eléctricas y siempre quise entender el impacto real de las eyecciones coronales sin perderme en fórmulas impenetrables. Anatomía Solar es claro, visual y aterradoramente fascinante. Compré por Hotmart y lo descargué en segundos.'
+    highlight: 'Imprescindible sobre tormentas solares.',
+    comment: 'Explica el impacto real en satélites y redes eléctricas con total claridad.'
   },
   {
     id: 't-3',
-    name: 'Prof. Marcos Aurelio Silveira',
-    role: 'Educador de Ciencias Naturales',
-    location: 'Rio de Janeiro, Brasil',
+    name: 'Prof. Marcos Silveira',
+    role: 'Educador de Ciencias',
+    location: 'Brasil',
     rating: 5,
-    highlight: 'Mis alumnos quedaron fascinados con los diagramas y conceptos.',
-    comment: 'Uso los conceptos del libro para mis clases de física y biología. La forma en que Alberto conecta la fotosíntesis con el túnel cuántico en el núcleo solar es simplemente magistral. Vale cada centavo invertido.'
+    highlight: 'Excelente material didáctico.',
+    comment: 'Los diagramas son perfectos para enseñar la física del Sol de manera entretenida.'
   },
   {
     id: 't-4',
     name: 'Valeria Dupont',
-    role: 'Lector entusiasta de ciencia y cosmología',
-    location: 'Santiago, Chile',
+    role: 'Lectora de Divulgación',
+    location: 'Chile',
     rating: 5,
-    highlight: 'Es como ver un documental de Carl Sagan pero en tus manos.',
-    comment: 'Tenía miedo de que fuera demasiado técnico, pero se lee como una novela de aventuras cósmicas. No puedes soltarlo. Llegué por un reel de Instagram y ha sido la mejor inversión de lectura del año.'
+    highlight: 'Fascinante de principio a fin.',
+    comment: 'Se lee como una aventura. Aprendí muchísimo sobre el Sol en pocas horas.'
   }
 ];
 
 export const FAQ_LIST: FAQItem[] = [
   {
     category: 'compra',
-    question: '¿Cómo y cuándo recibiré el libro tras realizar el pago?',
-    answer: 'La entrega es 100% inmediata y automática. Al confirmar tu pago en la plataforma segura de Hotmart, recibirás un correo electrónico oficial con tu enlace directo de descarga y acceso permanente. Podrás comenzar a leer en menos de 2 minutos.'
+    question: '¿Cómo recibo el libro tras el pago?',
+    answer: 'Acceso y descarga inmediata por correo electrónico al confirmar en Hotmart.'
   },
   {
     category: 'compra',
-    question: '¿Es seguro comprar a través de Hotmart?',
-    answer: 'Totalmente seguro. Hotmart es el mayor procesador de productos digitales de Iberoamérica, con más de 10 años de trayectoria y cifrado bancario SSL de 256 bits. Tus datos financieros nunca se almacenan en servidores externos ni son visibles para terceros.'
+    question: '¿Es seguro comprar en Hotmart?',
+    answer: '100% seguro, con cifrado bancario SSL de 256 bits y protección oficial de Hotmart.'
   },
   {
     category: 'garantia',
-    question: '¿Qué garantía tengo si el libro no cumple mis expectativas?',
-    answer: 'Cuentas con 7 días completos de garantía incondicional respaldada por Hotmart. Si sientes que el libro no superó tus expectativas, puedes solicitar el 100% del reembolso con un solo clic dentro de tu panel de usuario, sin preguntas ni trámites molestos.'
+    question: '¿Qué garantía tengo?',
+    answer: '7 días de garantía incondicional respaldada por Hotmart con reembolso del 100%.'
   },
   {
     category: 'contenido',
-    question: '¿En qué formatos está disponible y en qué dispositivos puedo leerlo?',
-    answer: 'Recibirás el libro en formato digital de alta resolución: PDF enriquecido con diagramas a todo color (ideal para tablets, iPad, computadoras y lectores e-ink) y ePub adaptable para Kindle o smartphones. También puedes leerlo cómodamente en la app oficial de Hotmart sin gastar datos.'
+    question: '¿En qué formatos puedo leerlo?',
+    answer: 'PDF ilustrado en alta resolución y ePub adaptable para tablet, PC o móvil.'
   },
   {
     category: 'contenido',
-    question: '¿Necesito conocimientos previos de astrofísica o matemáticas avanzadas?',
-    answer: '¡En absoluto! El Bioq. Dr. Alberto Martin White escribió Anatomía Solar con un lenguaje fluido, envolvente y visual, diseñado tanto para mentes curiosas sin formación científica como para estudiantes y profesionales que buscan profundizar con rigor.'
+    question: '¿Necesito conocimientos de física?',
+    answer: 'No. El libro está redactado en lenguaje accesible, visual y directo para todos.'
   },
   {
     category: 'compra',
-    question: '¿Cuáles son los métodos de pago disponibles?',
-    answer: 'Hotmart acepta múltiples formas de pago adaptadas a tu país: tarjetas de crédito (con opción de pagar en cuotas), tarjetas de débito, Pix (en Brasil), PayPal, y métodos en efectivo o transferencia bancaria según tu ubicación.'
+    question: '¿Cuáles son los métodos de pago?',
+    answer: 'Tarjetas de crédito/débito, cuotas, Pix (Brasil) y PayPal según tu país.'
   }
 ];
 
@@ -247,24 +215,24 @@ export const BOOK_SPECS = {
   subtitle: 'Un viaje al corazón ardiente de nuestra estrella',
   author: 'Bioq. Dr. Alberto Martin White',
   entity: 'Futura Biotech',
-  pages: 'Edición Completa Ilustrada',
-  language: 'Español (con términos astronómicos universales)',
-  format: 'Ebook Digital Multidispositivo (PDF Retina + ePub Kindle Ready)',
+  pages: 'Edición Ilustrada',
+  language: 'Español',
+  format: 'PDF HD + ePub',
   bonuses: [
     {
-      title: 'Bonus 1: Guía de Observación Solar Segura',
+      title: 'Bonus 1: Guía de Observación Segura',
       value: 'R$ 65,00',
-      description: 'Aprende a rastrear manchas solares y tránsitos con prismáticos y telescopios sin arriesgar tu vista jamás.'
+      description: 'Cómo observar manchas solares sin arriesgar tu vista.'
     },
     {
-      title: 'Bonus 2: Infografía Gigante de la Anatomía Solar en Ultra HD',
+      title: 'Bonus 2: Póster Digital 8K del Sol',
       value: 'R$ 49,00',
-      description: 'Póster digital en 8K de corte transversal con todas las capas y temperaturas, listo para imprimir o fondo de pantalla.'
+      description: 'Infografía gigante con todas las capas y temperaturas solares.'
     },
     {
-      title: 'Bonus 3: Glosario de Climatología Espacial & Tormentas Solares',
+      title: 'Bonus 3: Glosario de Clima Espacial',
       value: 'R$ 38,00',
-      description: 'Los términos clave que debes dominar para entender las alertas solares de la NASA y la NOAA en tiempo real.'
+      description: 'Conceptos clave para entender las alertas solares de la NASA y NOAA.'
     }
   ]
 };

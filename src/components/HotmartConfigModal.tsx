@@ -85,7 +85,7 @@ export const HotmartConfigModal: React.FC<HotmartConfigModalProps> = ({
               type="text"
               value={formData.hotmartCheckoutUrl}
               onChange={(e) => setFormData({ ...formData, hotmartCheckoutUrl: e.target.value })}
-              placeholder="https://pay.hotmart.com/V102119673D"
+              placeholder="https://pay.hotmart.com/V102119673D?checkoutMode=2"
               className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-950 border border-neutral-700 text-white font-mono text-xs sm:text-sm focus:border-amber-400 focus:outline-none"
               required
             />

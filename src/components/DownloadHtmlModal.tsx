@@ -17,7 +17,15 @@ export const DownloadHtmlModal: React.FC<DownloadHtmlModalProps> = ({
 
   if (!isOpen) return null;
 
-  const checkoutLink = `${config.hotmartCheckoutUrl}${config.hotmartCheckoutUrl.includes('?') ? '&' : '?'}src=${config.campaignSource}`;
+  const rawCheckoutUrl = config.hotmartCheckoutUrl || 'https://pay.hotmart.com/V102119673D?checkoutMode=2';
+  const hasParams = rawCheckoutUrl.includes('?');
+  let checkoutLink = rawCheckoutUrl;
+  if (!checkoutLink.includes('checkoutMode=2')) {
+    checkoutLink += `${hasParams ? '&' : '?'}checkoutMode=2`;
+  }
+  if (config.campaignSource) {
+    checkoutLink += `${checkoutLink.includes('?') ? '&' : '?'}src=${config.campaignSource}`;
+  }
 
   const generatedHtml = `<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
@@ -46,6 +54,9 @@ export const DownloadHtmlModal: React.FC<DownloadHtmlModalProps> = ({
     body { font-family: 'Outfit', sans-serif; background-color: #07090e; color: #e8ecf4; }
     .font-cinzel { font-family: 'Cinzel', serif; }
   </style>
+  <!-- Hotmart Checkout Widget (checkoutMode=2) -->
+  <link rel="stylesheet" type="text/css" href="https://static.hotmart.com/css/hotmart-fb.min.css">
+  <script type="text/javascript" src="https://static.hotmart.com/checkout/widget.min.js"></script>
 </head>
 <body class="selection:bg-amber-500 selection:text-black">
   <!-- Top Urgency Bar -->
@@ -75,7 +86,8 @@ export const DownloadHtmlModal: React.FC<DownloadHtmlModalProps> = ({
         Acceso Inmediato
       </div>
       <div class="text-xs text-emerald-400 font-mono mb-6">Descarga Inmediata • Garantía 7 días Hotmart</div>
-      <a href="${checkoutLink}" target="_blank" rel="noopener noreferrer" class="block w-full py-5 rounded-2xl font-cinzel font-black text-lg uppercase tracking-wider bg-gradient-to-r from-amber-400 via-orange-500 to-yellow-300 text-neutral-950 hover:from-yellow-300 hover:to-orange-400 transition-all shadow-xl shadow-orange-500/50 transform hover:scale-105">
+      <!-- Hotmart Widget Checkout Trigger Button -->
+      <a onclick="return false;" href="${checkoutLink}" class="hotmart-fb hotmart__button-checkout block w-full py-5 rounded-2xl font-cinzel font-black text-lg uppercase tracking-wider bg-gradient-to-r from-amber-400 via-orange-500 to-yellow-300 text-neutral-950 hover:from-yellow-300 hover:to-orange-400 transition-all shadow-xl shadow-orange-500/50 transform hover:scale-105">
         🔥 OBTENER EL LIBRO AHORA →
       </a>
     </div>
@@ -87,7 +99,7 @@ export const DownloadHtmlModal: React.FC<DownloadHtmlModalProps> = ({
       <div class="text-xs font-bold text-white">ANATOMÍA SOLAR</div>
       <div class="text-xs text-amber-400 font-medium">Edición Digital Oficial</div>
     </div>
-    <a href="${checkoutLink}" class="py-3 px-5 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-neutral-950 text-xs font-black uppercase shadow-lg tracking-wider">
+    <a onclick="return false;" href="${checkoutLink}" class="hotmart-fb hotmart__button-checkout py-3 px-5 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-neutral-950 text-xs font-black uppercase shadow-lg tracking-wider">
       Comprar
     </a>
   </div>

@@ -21,6 +21,7 @@ import { HotmartConfigModal } from './components/HotmartConfigModal';
 import { DownloadHtmlModal } from './components/DownloadHtmlModal';
 import { Footer } from './components/Footer';
 import { ExternalLink, CheckCircle2, ShieldCheck, Lock, X } from 'lucide-react';
+import { initHotmartWidget, triggerHotmartCheckout } from './utils/hotmartWidget';
 
 export default function App() {
   const [config, setConfig] = useState<CampaignConfig>(() => {
@@ -29,9 +30,14 @@ export default function App() {
       const saved = localStorage.getItem('solar_landing_config');
       if (saved) {
         const parsed = JSON.parse(saved);
-        // Replace old placeholder with official Hotmart checkout link
-        if (!parsed.hotmartCheckoutUrl || parsed.hotmartCheckoutUrl.includes('PROMO-ANATOMIA-SOLAR')) {
-          parsed.hotmartCheckoutUrl = 'https://pay.hotmart.com/V102119673D';
+        // Replace old placeholder with official Hotmart checkout link with checkoutMode=2
+        if (!parsed.hotmartCheckoutUrl || parsed.hotmartCheckoutUrl.includes('PROMO-ANATOMIA-SOLAR') || !parsed.hotmartCheckoutUrl.includes('V102119673D')) {
+          parsed.hotmartCheckoutUrl = 'https://pay.hotmart.com/V102119673D?checkoutMode=2';
+          localStorage.setItem('solar_landing_config', JSON.stringify(parsed));
+        } else if (!parsed.hotmartCheckoutUrl.includes('checkoutMode=2')) {
+          parsed.hotmartCheckoutUrl = parsed.hotmartCheckoutUrl.includes('?') 
+            ? `${parsed.hotmartCheckoutUrl}&checkoutMode=2`
+            : `${parsed.hotmartCheckoutUrl}?checkoutMode=2`;
           localStorage.setItem('solar_landing_config', JSON.stringify(parsed));
         }
         return parsed;
@@ -45,6 +51,11 @@ export default function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isDownloadOpen, setIsDownloadOpen] = useState(false);
   const [checkoutModalUrl, setCheckoutModalUrl] = useState<string | null>(null);
+
+  // Initialize Hotmart official script on mount
+  useEffect(() => {
+    initHotmartWidget();
+  }, []);
 
   // Adopt traffic parameters from URL if present (e.g. ?src=fb_ad or ?utm_source=instagram)
   useEffect(() => {
@@ -68,8 +79,7 @@ export default function App() {
 
   // Direct checkout action handler
   const handleCheckoutClick = (locationSource: string) => {
-    // Generate final destination URL with Hotmart checkout
-    const destination = config.hotmartCheckoutUrl || 'https://pay.hotmart.com/V102119673D';
+    const destination = config.hotmartCheckoutUrl || 'https://pay.hotmart.com/V102119673D?checkoutMode=2';
     const separator = destination.includes('?') ? '&' : '?';
     const finalUrl = config.campaignSource
       ? `${destination}${separator}src=${config.campaignSource}_${locationSource}&utm_source=${config.campaignSource}`
@@ -88,7 +98,17 @@ export default function App() {
       }
     }
 
-    // Attempt direct window open in a new tab
+    // Trigger Hotmart official widget first
+    try {
+      triggerHotmartCheckout(destination, {
+        src: config.campaignSource ? `${config.campaignSource}_${locationSource}` : undefined,
+        utm_source: config.campaignSource || undefined
+      });
+    } catch {
+      // ignore
+    }
+
+    // Direct window open in a new tab if outside iframe or as backup
     let openedWindow: Window | null = null;
     try {
       openedWindow = window.open(finalUrl, '_blank', 'noopener,noreferrer');

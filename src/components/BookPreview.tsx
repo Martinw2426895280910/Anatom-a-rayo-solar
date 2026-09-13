@@ -33,17 +33,16 @@ export const BookPreview: React.FC<BookPreviewProps> = ({ config, onCheckoutClic
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-mono font-medium uppercase tracking-wider mb-4">
-            <BookOpen className="w-4 h-4 text-amber-400" />
-            Estructura Temática Completa
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-mono font-medium uppercase tracking-wider mb-3">
+            <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+            Temario del Libro
           </div>
-          <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Contenido y <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-red-400">Capítulos del Libro</span>
+          <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-white mb-3 leading-tight">
+            Contenido y <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-red-400">Capítulos</span>
           </h2>
-          <p className="text-neutral-300 text-base sm:text-lg leading-relaxed font-light">
-            8 capítulos minuciosamente organizados que te guían desde el nacimiento del Sol hasta su destino final, 
-            combinando rigor astrofísico, biología celular y narrativa inmersiva.
+          <p className="text-neutral-400 text-sm font-light">
+            8 capítulos organizados para una lectura inmersiva y directa.
           </p>
         </div>
 
@@ -98,13 +97,10 @@ export const BookPreview: React.FC<BookPreviewProps> = ({ config, onCheckoutClic
                         {chap.description}
                       </p>
 
-                      <div className="space-y-2">
-                        <span className="text-xs font-mono uppercase tracking-wider text-amber-400 font-semibold block mb-1">
-                          Temas clave revelados en este capítulo:
-                        </span>
+                      <div className="space-y-1.5">
                         {chap.highlights.map((item, idx) => (
-                          <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-neutral-300">
-                            <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                          <div key={idx} className="flex items-start gap-2 text-xs text-neutral-300">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </div>
                         ))}
@@ -116,16 +112,16 @@ export const BookPreview: React.FC<BookPreviewProps> = ({ config, onCheckoutClic
             })}
 
             {/* Read Sample CTA */}
-            <div className="pt-2 flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
-              <div className="flex items-center gap-2.5 text-xs text-neutral-300">
+            <div className="pt-2 flex items-center justify-between gap-3 p-3.5 rounded-xl bg-neutral-900/60 border border-neutral-800">
+              <div className="flex items-center gap-2 text-xs text-neutral-300">
                 <FileText className="w-4 h-4 text-amber-400" />
-                <span>¿Quieres explorar el contenido antes de comprar?</span>
+                <span>¿Quieres ver el estilo del libro?</span>
               </div>
               <button
                 onClick={() => setShowSampleModal(true)}
-                className="text-xs font-semibold text-amber-400 hover:text-amber-300 underline underline-offset-4 cursor-pointer"
+                className="text-xs font-semibold text-amber-400 hover:text-amber-300 underline underline-offset-4 cursor-pointer whitespace-nowrap"
               >
-                Ver Muestra Gratuita (Capítulo 1)
+                Muestra Gratuita (Cap. 1)
               </button>
             </div>
           </div>
@@ -134,79 +130,75 @@ export const BookPreview: React.FC<BookPreviewProps> = ({ config, onCheckoutClic
           <div className="lg:col-span-5 space-y-6">
             
             {/* Specifications Card */}
-            <div className="p-6 rounded-2xl bg-[#0c121e] border border-amber-500/30 shadow-xl">
-              <h3 className="font-cinzel text-lg sm:text-xl font-bold text-white mb-4 pb-3 border-b border-neutral-800 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-amber-400" />
-                Ficha Técnica Oficial
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#0c121e] border border-amber-500/30 shadow-xl">
+              <h3 className="font-cinzel text-base sm:text-lg font-bold text-white mb-3 pb-2 border-b border-neutral-800 flex items-center gap-2">
+                <FileText className="w-4 h-4 text-amber-400" />
+                Ficha Técnica
               </h3>
 
-              <div className="space-y-3 text-xs sm:text-sm">
-                <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
+              <div className="space-y-2.5 text-xs">
+                <div className="flex justify-between py-1 border-b border-neutral-800/60">
                   <span className="text-neutral-400">Título:</span>
                   <span className="text-white font-medium text-right font-cinzel">ANATOMÍA SOLAR</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
+                <div className="flex justify-between py-1 border-b border-neutral-800/60">
                   <span className="text-neutral-400">Autor:</span>
                   <span className="text-amber-300 font-medium text-right">Bioq. Dr. Alberto Martin White</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
-                  <span className="text-neutral-400">Sello editorial:</span>
-                  <span className="text-white font-medium text-right">FUTURA BIOTECH</span>
+                <div className="flex justify-between py-1 border-b border-neutral-800/60">
+                  <span className="text-neutral-400">Sello:</span>
+                  <span className="text-white font-medium text-right">Futura Biotech</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
-                  <span className="text-neutral-400">Extensión:</span>
-                  <span className="text-white font-medium text-right">{BOOK_SPECS.pages}</span>
-                </div>
-                <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
+                <div className="flex justify-between py-1 border-b border-neutral-800/60">
                   <span className="text-neutral-400">Formatos:</span>
-                  <span className="text-white font-medium text-right">PDF HD + ePub (Multidispositivo)</span>
+                  <span className="text-white font-medium text-right">PDF HD + ePub</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-neutral-800/60">
-                  <span className="text-neutral-400">Plataforma de entrega:</span>
-                  <span className="text-emerald-400 font-medium text-right">Hotmart (Inmediato)</span>
+                <div className="flex justify-between py-1 border-b border-neutral-800/60">
+                  <span className="text-neutral-400">Entrega:</span>
+                  <span className="text-emerald-400 font-medium text-right">Hotmart (Inmediata)</span>
                 </div>
-                <div className="flex justify-between py-1.5">
-                  <span className="text-neutral-400">Actualizaciones:</span>
-                  <span className="text-white font-medium text-right">De por vida sin costo</span>
+                <div className="flex justify-between py-1">
+                  <span className="text-neutral-400">Garantía:</span>
+                  <span className="text-white font-medium text-right">7 días incondicional</span>
                 </div>
               </div>
             </div>
 
             {/* Included Exclusive Bonuses */}
-            <div className="p-6 rounded-2xl bg-gradient-to-b from-[#141b2b] to-[#0c121e] border border-amber-500/40 shadow-xl relative overflow-hidden">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-500/30">
-                <Gift className="w-3.5 h-3.5" />
-                Incluidos 100% Gratis con tu orden
+            <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-b from-[#141b2b] to-[#0c121e] border border-amber-500/40 shadow-xl relative overflow-hidden">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
+                <Gift className="w-3 h-3" />
+                Incluidos 100% Gratis
               </div>
 
-              <h3 className="font-cinzel text-xl font-bold text-white mb-2">
-                3 Materiales Exclusivos de Regalo
+              <h3 className="font-cinzel text-lg font-bold text-white mb-1">
+                3 Bonus Exclusivos
               </h3>
-              <p className="text-xs text-neutral-400 mb-6">
-                Valorados en más de R$ 150,00, hoy incluidos a costo cero al ordenar tu copia de Anatomía Solar:
+              <p className="text-xs text-neutral-400 mb-4">
+                Incluidos sin costo adicional con tu descarga digital:
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {BOOK_SPECS.bonuses.map((bonus, bIndex) => (
-                  <div key={bIndex} className="p-3.5 rounded-xl bg-neutral-950/70 border border-neutral-800">
+                  <div key={bIndex} className="p-3 rounded-xl bg-neutral-950/70 border border-neutral-800">
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-semibold text-xs text-amber-300">{bonus.title}</span>
-                      <span className="text-[11px] font-mono text-neutral-500 line-through">Valor: {bonus.value}</span>
+                      <span className="text-[10px] font-mono text-neutral-500 line-through">Valor: {bonus.value}</span>
                     </div>
-                    <p className="text-xs text-neutral-300 font-light leading-relaxed">
+                    <p className="text-xs text-neutral-300 font-light">
                       {bonus.description}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 pt-4 border-t border-neutral-800">
+              <div className="mt-5 pt-3 border-t border-neutral-800">
                 <button
                   onClick={() => onCheckoutClick('chapters-sidebar-cta')}
-                  className="fire-btn w-full py-4 px-6 rounded-2xl font-cinzel font-black text-sm sm:text-base uppercase tracking-widest text-neutral-950 shadow-xl shadow-orange-600/40 hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer flex items-center justify-center gap-2 border border-yellow-300/50"
+                  className="fire-btn w-full py-3.5 px-6 rounded-2xl font-cinzel font-black text-sm uppercase tracking-widest text-neutral-950 shadow-xl shadow-orange-600/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer flex items-center justify-center gap-2 border border-yellow-300/50"
                 >
-                  <Flame className="w-5 h-5 text-neutral-950 animate-bounce" />
-                  <span>DESCARGAR LIBRO & TODOS LOS BONUS</span>
+                  <Flame className="w-4 h-4 text-neutral-950 animate-bounce" />
+                  <span>COMPRAR EN HOTMART</span>
                   <ArrowRight className="w-4 h-4 text-neutral-950" />
                 </button>
               </div>

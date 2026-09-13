@@ -76,66 +76,56 @@ export const Hero: React.FC<HeroProps> = ({ config, onCheckoutClick }) => {
           <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
             
             {/* Exclusive Promo Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-red-500/20 border border-amber-500/40 text-amber-300 text-xs sm:text-sm font-medium mb-6 shadow-sm shadow-amber-500/10 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-medium mb-5 backdrop-blur-sm">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
               </span>
               <span className="font-semibold uppercase tracking-wider">
-                ¡Promoción exclusive! • Edición Oficial
+                Edición Oficial • Acceso Inmediato
               </span>
-              <Sparkles className="w-4 h-4 text-yellow-400" />
+              <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
             </div>
 
             {/* Author Attribution */}
-            <div className="flex items-center gap-2.5 mb-3 text-neutral-400 text-xs sm:text-sm tracking-wider uppercase font-medium">
-              <span className="text-amber-400 font-semibold">FUTURA BIOTECH</span>
+            <div className="flex items-center gap-2 mb-2 text-neutral-400 text-xs tracking-wider uppercase font-medium">
+              <span className="text-amber-400 font-semibold">Futura Biotech</span>
               <span className="text-neutral-600">•</span>
-              <span className="text-neutral-200">Bioq. Dr. Alberto Martin White</span>
+              <span className="text-neutral-300">Bioq. Dr. Alberto Martin White</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-cinzel text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.08] mb-4">
+            <h1 className="font-cinzel text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.08] mb-3">
               ANATOMÍA <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-red-500">SOLAR</span>
             </h1>
 
             {/* Subheadline: The Voyage to the Core */}
-            <p className="font-cinzel text-lg sm:text-2xl text-amber-200/90 font-medium italic mb-6 max-w-2xl">
+            <p className="font-cinzel text-base sm:text-lg text-amber-200/90 font-medium italic mb-3 max-w-xl">
               “Un viaje al corazón ardiente de nuestra estrella”
             </p>
 
-            {/* Emotional hook / narrative intro */}
-            <p className="text-base sm:text-lg text-neutral-300 leading-relaxed mb-8 max-w-2xl font-light">
-              Desciende a través de <strong className="text-amber-300 font-semibold">15 millones de grados</strong>, 
-              sigue el titánico viaje de un fotón durante 100.000 años y descubre cómo el reactor más colosal de nuestro sistema 
-              gobierna el clima espacial, la física cuántica y el propio origen de la vida en la Tierra.
+            {/* Direct, punchy summary */}
+            <p className="text-sm sm:text-base text-neutral-300 leading-relaxed mb-6 max-w-lg font-light">
+              Desde el núcleo a 15 millones de grados hasta las tormentas solares en la Tierra. Ciencia visual y fascinante para todos.
             </p>
 
             {/* Action Card & Enormous Fire-Pulsing CTA */}
-            <div className="w-full max-w-xl p-6 sm:p-7 rounded-3xl bg-[#0e1422]/95 border-2 border-amber-500/40 shadow-2xl shadow-orange-950/60 backdrop-blur-md mb-6 relative overflow-hidden">
+            <div className="w-full max-w-xl p-5 sm:p-6 rounded-3xl bg-[#0e1422]/95 border-2 border-amber-500/40 shadow-2xl shadow-orange-950/60 backdrop-blur-md mb-5 relative overflow-hidden">
               {/* Subtle background solar flame glow */}
               <div className="absolute -top-16 -right-16 w-44 h-44 bg-gradient-to-br from-amber-500/20 to-red-600/20 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-neutral-800/90 relative z-10">
-                <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-mono font-bold uppercase tracking-wider mb-1">
-                    <Flame className="w-3.5 h-3.5 text-orange-400 animate-bounce" />
-                    Edición Oficial • Acceso Inmediato
-                  </div>
-                  <div className="text-sm sm:text-base text-neutral-200 font-medium mt-1">
-                    Descarga completa del Ebook + 3 Bonus Exclusivos
-                  </div>
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-neutral-800/90 relative z-10">
+                <div className="text-xs sm:text-sm text-neutral-200 font-medium">
+                  <span className="text-amber-400 font-semibold">Ebook Digital</span> + 3 Bonus incluidos
                 </div>
 
-                <div className="text-right">
-                  <div className="flex items-center gap-1 text-yellow-400 text-xs justify-end">
+                <div className="flex items-center gap-1.5 text-xs text-neutral-300">
+                  <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
+                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
                     ))}
                   </div>
-                  <span className="text-[11px] text-neutral-400 font-mono">
-                    4.9/5 • Más de 850 lectores
-                  </span>
+                  <span className="font-mono text-neutral-400 text-[11px]">4.9 (+850 lectores)</span>
                 </div>
               </div>
 
@@ -143,44 +133,44 @@ export const Hero: React.FC<HeroProps> = ({ config, onCheckoutClick }) => {
               <div className="relative z-10">
                 <button
                   onClick={() => onCheckoutClick('hero-main')}
-                  className="fire-btn w-full py-5 sm:py-6 px-8 rounded-2xl font-cinzel font-black text-lg sm:text-2xl uppercase tracking-widest text-neutral-950 shadow-2xl shadow-orange-600/60 hover:shadow-orange-500/90 hover:scale-[1.03] active:scale-[0.98] transition-all flex items-center justify-center gap-3 cursor-pointer group border-2 border-yellow-300/60"
+                  className="fire-btn w-full py-4 sm:py-5 px-6 sm:px-8 rounded-2xl font-cinzel font-black text-base sm:text-xl uppercase tracking-widest text-neutral-950 shadow-2xl shadow-orange-600/60 hover:shadow-orange-500/90 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer group border-2 border-yellow-300/60"
                 >
-                  <Flame className="w-6 h-6 sm:w-7 sm:h-7 text-neutral-950 animate-bounce group-hover:scale-125 transition-transform" />
+                  <Flame className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-950 animate-bounce group-hover:scale-125 transition-transform" />
                   <span className="tracking-widest">OBTENER EL LIBRO AHORA</span>
-                  <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 text-neutral-950 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-950 group-hover:translate-x-2 transition-transform" />
                 </button>
               </div>
 
               {/* Trust Badges under CTA */}
-              <div className="mt-5 grid grid-cols-3 gap-2 text-center text-[11px] sm:text-xs text-neutral-300 relative z-10 font-medium">
-                <div className="flex items-center justify-center gap-1.5">
-                  <Lock className="w-4 h-4 text-amber-400 shrink-0" />
-                  <span>Plataforma Oficial Hotmart</span>
+              <div className="mt-4 grid grid-cols-3 gap-2 text-center text-[11px] text-neutral-300 relative z-10 font-medium">
+                <div className="flex items-center justify-center gap-1">
+                  <Lock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>Pago Seguro Hotmart</span>
                 </div>
-                <div className="flex items-center justify-center gap-1.5 border-x border-neutral-800">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Garantía de 7 Días</span>
+                <div className="flex items-center justify-center gap-1 border-x border-neutral-800">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span>7 Días de Garantía</span>
                 </div>
-                <div className="flex items-center justify-center gap-1.5">
-                  <Sparkles className="w-4 h-4 text-yellow-400 shrink-0" />
-                  <span>Entrega Digital Inmediata</span>
+                <div className="flex items-center justify-center gap-1">
+                  <Sparkles className="w-3.5 h-3.5 text-yellow-400 shrink-0" />
+                  <span>Entrega Inmediata</span>
                 </div>
               </div>
             </div>
 
             {/* Quick Feature Bullets */}
-            <div className="flex flex-wrap gap-y-2 gap-x-4 text-xs sm:text-sm text-neutral-300 justify-center lg:justify-start">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                Edición digital con ilustraciones en alta definición
+            <div className="flex flex-wrap gap-y-1.5 gap-x-4 text-xs text-neutral-400 justify-center lg:justify-start font-light">
+              <span className="flex items-center gap-1">
+                <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
+                PDF Retina + ePub
               </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                Formatos PDF Retina + ePub Kindle
+              <span className="flex items-center gap-1">
+                <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
+                Ilustraciones HD a color
               </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                3 Bonus exclusivos de climatología espacial
+              <span className="flex items-center gap-1">
+                <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
+                Acceso de por vida
               </span>
             </div>
 

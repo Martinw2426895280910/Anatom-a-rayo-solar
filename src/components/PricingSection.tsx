@@ -30,103 +30,110 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ config, onChecko
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono font-medium uppercase tracking-wider mb-4">
-            <Flame className="w-4 h-4 text-orange-400" />
-            Acceso Completo & Garantizado
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono font-medium uppercase tracking-wider mb-3">
+            <Flame className="w-3.5 h-3.5 text-orange-400" />
+            Acceso Digital
           </div>
-          <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Comienza Hoy Tu Viaje al <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500">
-              Corazón del Sol
-            </span>
+          <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">
+            Consigue tu <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500">Copia Digital</span>
           </h2>
-          <p className="text-neutral-300 text-base sm:text-lg leading-relaxed font-light">
-            Obtén la edición digital completa de <em>Anatomía Solar</em> con todos los bonus incluidos y el respaldo incondicional de Hotmart.
+          <p className="text-neutral-400 text-sm font-light">
+            Descarga inmediata con 3 bonus incluidos y 7 días de garantía.
           </p>
         </div>
 
         {/* Pricing Offer Card */}
         <div className="max-w-3xl mx-auto">
-          <div className="relative rounded-3xl bg-[#0b101c] border-2 border-amber-500/50 shadow-[0_20px_60px_-15px_rgba(245,158,11,0.2)] p-6 sm:p-10 backdrop-blur-xl">
+          <div className="relative rounded-3xl bg-[#0b101c] border-2 border-amber-500/50 shadow-[0_20px_60px_-15px_rgba(245,158,11,0.2)] p-6 sm:p-8 backdrop-blur-xl">
             
             {/* Top Launch Pill */}
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-              <span className="bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-neutral-950 font-bold font-mono text-xs uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 whitespace-nowrap">
-                <Sparkles className="w-3.5 h-3.5 text-black" />
-                ¡OFERTA ESPECIAL DE LANZAMIENTO!
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+              <span className="bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-neutral-950 font-bold font-mono text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                <Sparkles className="w-3 h-3 text-black" />
+                LANZAMIENTO DIGITAL
               </span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-4">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center pt-2">
               
               {/* Left Column: What's included */}
-              <div className="md:col-span-7 space-y-4">
+              <div className="md:col-span-7 space-y-3">
                 <div className="text-xs font-mono text-amber-400 uppercase tracking-wider font-semibold">
-                  Paquete Digital Completo • Edición Autor
+                  Paquete Completo
                 </div>
-                <h3 className="font-cinzel text-2xl font-bold text-white">
-                  Anatomía Solar: Ebook & Recursos
+                <h3 className="font-cinzel text-xl font-bold text-white">
+                  Anatomía Solar
                 </h3>
                 
-                <div className="space-y-3 text-xs sm:text-sm text-neutral-200">
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Ebook Oficial Completo:</strong> Infolibro integral con diagramas astronómicos e infografías en alta resolución.</span>
+                <div className="space-y-2 text-xs sm:text-sm text-neutral-200">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                    <span>Ebook en PDF Retina + ePub</span>
                   </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Multi-formato universal:</strong> PDF interactivo para computadoras/tablets y ePub para Kindle.</span>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                    <span>Bonus 1: Guía de observación solar</span>
                   </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Bonus 1:</strong> Guía de Observación Solar Segura (Valor: R$ 65,00).</span>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                    <span>Bonus 2: Infografía 8K del Sol</span>
                   </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Bonus 2:</strong> Infografía Gigante 8K del Sol (Valor: R$ 49,00).</span>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                    <span>Bonus 3: Glosario de clima espacial</span>
                   </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Bonus 3:</strong> Glosario de Climatología Espacial (Valor: R$ 38,00).</span>
-                  </div>
-                  <div className="flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Acceso vitalicio:</strong> Descarga permanente y actualizaciones futuras gratuitas.</span>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                    <span>Acceso vitalicio sin mensualidades</span>
                   </div>
                 </div>
               </div>
 
-              {/* Right Column: Instant Access Card & Enormous Fire Button */}
-              <div className="md:col-span-5 flex flex-col items-center md:items-end justify-center p-6 sm:p-7 rounded-2xl bg-black/60 border-2 border-amber-500/40 text-center md:text-right shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
-
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-mono font-bold uppercase tracking-wider mb-2">
-                  <Flame className="w-3.5 h-3.5 text-orange-400 animate-bounce" />
-                  Edición Digital Completa
-                </div>
-                
-                <div className="my-2">
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white font-cinzel tracking-tight">
-                    Acceso Instantáneo
+              {/* Right Column: Instant Access Card & Button */}
+              <div className="md:col-span-5 flex flex-col items-center md:items-end justify-center p-5 rounded-2xl bg-black/60 border-2 border-amber-500/40 text-center md:text-right shadow-2xl relative overflow-hidden">
+                <div className="my-1">
+                  <div className="text-xl sm:text-2xl font-extrabold text-white font-cinzel tracking-tight">
+                    Acceso Inmediato
                   </div>
-                  <span className="text-xs font-mono text-emerald-400 block mt-1">
-                    Pago único y 100% seguro • Sin cobros recurrentes
+                  <span className="text-[11px] font-mono text-emerald-400 block mt-0.5">
+                    Pago único y 100% seguro
                   </span>
                 </div>
 
                 <button
                   onClick={() => onCheckoutClick('pricing-table-cta')}
-                  className="fire-btn w-full mt-4 py-5 px-6 sm:px-8 rounded-2xl font-cinzel font-black text-base sm:text-xl uppercase tracking-widest text-neutral-950 shadow-2xl shadow-orange-600/50 hover:scale-[1.03] active:scale-[0.98] transition-all flex items-center justify-center gap-3 cursor-pointer border-2 border-yellow-300/60"
+                  className="fire-btn w-full mt-3 py-4 px-6 rounded-2xl font-cinzel font-black text-sm uppercase tracking-widest text-neutral-950 shadow-xl shadow-orange-600/50 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer border-2 border-yellow-300/60"
                 >
-                  <Flame className="w-6 h-6 text-neutral-950 animate-bounce" />
+                  <Flame className="w-5 h-5 text-neutral-950 animate-bounce" />
                   <span>COMPRAR EN HOTMART</span>
-                  <ArrowRight className="w-6 h-6 text-neutral-950" />
+                  <ArrowRight className="w-4 h-4 text-neutral-950" />
                 </button>
 
-                <div className="mt-4 flex items-center justify-center gap-2 text-xs text-neutral-300 font-medium">
-                  <Lock className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Procesado por Hotmart Checkout Seguro</span>
+                {/* Hotmart Official Widget Anchor integration */}
+                <div className="mt-2.5 flex flex-col items-center justify-center">
+                  <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onCheckoutClick('pricing-hotmart-btn');
+                      return false;
+                    }}
+                    href={`https://pay.hotmart.com/V102119673D?checkoutMode=2${config.campaignSource ? `&src=${config.campaignSource}` : ''}`}
+                    className="hotmart-fb hotmart__button-checkout inline-block hover:opacity-95 transition-opacity cursor-pointer"
+                    title="Pago Seguro Hotmart"
+                  >
+                    <img
+                      src="https://static.hotmart.com/img/btn-buy-green.png"
+                      alt="Comprar ahora en Hotmart"
+                      className="h-10 w-auto object-contain mx-auto"
+                      referrerPolicy="no-referrer"
+                    />
+                  </a>
+                </div>
+
+                <div className="mt-2 flex items-center justify-center gap-1.5 text-[11px] text-neutral-400 font-medium">
+                  <Lock className="w-3 h-3 text-amber-400" />
+                  <span>Checkout Seguro Hotmart</span>
                 </div>
               </div>
 

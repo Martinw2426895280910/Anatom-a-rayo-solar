@@ -28,21 +28,21 @@ export const Footer: React.FC<FooterProps> = ({ config, onOpenSettings, onOpenDo
               </span>
             </div>
             <p className="text-neutral-400 text-xs leading-relaxed max-w-sm">
-              Una obra de divulgación científica del Bioq. Dr. Alberto Martin White bajo el sello Futura Biotech. Un viaje inmersivo al corazón de la estrella que nos dio la vida.
+              Divulgación científica por Bioq. Dr. Alberto Martin White (Futura Biotech).
             </p>
-            <div className="flex items-center gap-4 text-xs">
+            <div className="flex items-center gap-3 text-xs">
               <button 
                 onClick={onOpenSettings}
                 className="text-amber-400 hover:text-amber-300 underline cursor-pointer"
               >
-                Configurar Enlace Hotmart & Pixel
+                Configurar Hotmart
               </button>
               <span>•</span>
               <button 
                 onClick={onOpenDownload}
                 className="text-amber-400 hover:text-amber-300 underline cursor-pointer"
               >
-                Descargar HTML Autónomo
+                Exportar HTML
               </button>
             </div>
           </div>
@@ -52,33 +52,33 @@ export const Footer: React.FC<FooterProps> = ({ config, onOpenSettings, onOpenDo
             <div className="font-cinzel font-bold text-white text-xs uppercase tracking-wider mb-3">
               Navegación
             </div>
-            <ul className="space-y-2">
-              <li><a href="#inicio" className="hover:text-amber-400 transition-colors">Inicio & Portada 3D</a></li>
-              <li><a href="#viaje" className="hover:text-amber-400 transition-colors">El Viaje al Corazón</a></li>
-              <li><a href="#beneficios" className="hover:text-amber-400 transition-colors">Beneficios para el Lector</a></li>
-              <li><a href="#capitulos" className="hover:text-amber-400 transition-colors">Estructura de Capítulos</a></li>
-              <li><a href="#sabias-que" className="hover:text-amber-400 transition-colors">¿Sabías qué? (Curiosidades)</a></li>
-              <li><a href="#faq" className="hover:text-amber-400 transition-colors">Preguntas Frecuentes</a></li>
+            <ul className="space-y-1.5 text-xs">
+              <li><a href="#inicio" className="hover:text-amber-400 transition-colors">Inicio</a></li>
+              <li><a href="#viaje" className="hover:text-amber-400 transition-colors">Estructura</a></li>
+              <li><a href="#beneficios" className="hover:text-amber-400 transition-colors">Beneficios</a></li>
+              <li><a href="#capitulos" className="hover:text-amber-400 transition-colors">Capítulos</a></li>
+              <li><a href="#sabias-que" className="hover:text-amber-400 transition-colors">Curiosidades</a></li>
+              <li><a href="#faq" className="hover:text-amber-400 transition-colors">FAQ</a></li>
             </ul>
           </div>
 
           {/* Security & Hotmart Trust */}
           <div className="md:col-span-4 space-y-3">
             <div className="font-cinzel font-bold text-white text-xs uppercase tracking-wider mb-3">
-              Garantía y Seguridad
+              Seguridad
             </div>
-            <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800 space-y-2">
-              <div className="flex items-center gap-2 text-white font-semibold">
+            <div className="p-3.5 rounded-xl bg-neutral-900/60 border border-neutral-800 space-y-1.5">
+              <div className="flex items-center gap-2 text-white font-semibold text-xs">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Plataforma Oficial Hotmart</span>
+                <span>Checkout Seguro Hotmart</span>
               </div>
               <p className="text-[11px] text-neutral-400 leading-relaxed">
-                Tus pagos son procesados con encriptación de nivel bancario por Hotmart. Tienes 7 días completos de garantía incondicional de devolución.
+                Pagos encriptados con garantía incondicional de devolución de 7 días.
               </p>
             </div>
             <div className="flex items-center gap-2 text-neutral-400 text-[11px]">
               <Mail className="w-3.5 h-3.5 text-amber-400" />
-              <span>Contacto: contacto@futurabiotech.com</span>
+              <span>contacto@futurabiotech.com</span>
             </div>
           </div>
 
